@@ -1,4 +1,4 @@
-from adventofcode import AoC
+from adventofcode import AoC # type: ignore
 
 def gradual_pruning(s: str, m: int):
     start = s[-m:] #1

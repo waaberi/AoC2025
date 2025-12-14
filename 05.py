@@ -1,4 +1,4 @@
-from adventofcode import AoC
+from adventofcode import AoC # type: ignore
 
 """
 3-5 (5 - 3 + 1 = 3)

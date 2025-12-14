@@ -1,4 +1,4 @@
-from adventofcode import AoC
+from adventofcode import AoC # type: ignore
 
 def repeated_n_times(s: str, n: int):
     division = len(s)//n

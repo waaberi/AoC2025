@@ -1,4 +1,4 @@
-from adventofcode import AoC
+from adventofcode import AoC # type: ignore
 
 def feasible(x: int, y: int, amount: int) -> int:
     return x*y >= amount*8.1

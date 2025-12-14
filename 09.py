@@ -1,4 +1,4 @@
-from adventofcode import AoC
+from adventofcode import AoC # type: ignore
 import itertools
 
 def is_top(prev: tuple[int, int], cur: tuple[int, int], next: tuple[int, int]):
@@ -155,5 +155,4 @@ aoc.submit_p1()
 
 expected_result = 24
 aoc.assert_p2(inp, expected_result)
-for _ in range(10):
-    aoc.submit_p2()
+aoc.submit_p2()

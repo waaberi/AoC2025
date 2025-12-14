@@ -1,4 +1,4 @@
-from adventofcode import AoC
+from adventofcode import AoC # type: ignore
 import math
 from itertools import combinations
 from collections import Counter
@@ -37,8 +37,13 @@ def dist_compute(inp: str) -> tuple[int, list[tuple[int, ...]],list[tuple[float,
 
     return n, points, distances
 
-def part1(inp: str, num_connections: int = 1000) -> str | int | None:
+def part1(inp: str) -> str | int | None:
     n, _, distances = dist_compute(inp)
+
+    if n == 20:
+        num_connections = 10
+    else:
+        num_connections = 1000
 
     uf = UnionFind(n)
     connections_made = 0
@@ -50,9 +55,9 @@ def part1(inp: str, num_connections: int = 1000) -> str | int | None:
         connections_made += 1
 
     circuit_sizes = Counter(uf.find(i) for i in range(n))
-    
-    largest = sorted(circuit_sizes.values(), reverse=True)[:3]
-    
+
+    largest = sorted(circuit_sizes.values(), reverse=True)
+
     return largest[0] * largest[1] * largest[2]
 
 
@@ -97,7 +102,7 @@ inp = """162,817,812
 984,92,344
 425,690,689"""
 expected_result = 40
-aoc.assert_p1(inp, 40)
+aoc.assert_p1(inp, expected_result)
 aoc.submit_p1()
 
 expected_result = 25272

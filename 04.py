@@ -1,4 +1,4 @@
-from adventofcode import AoC
+from adventofcode import AoC # type: ignore
 
 def proper_check_adj_pos(lst: list[list[str]], i: int, j: int) -> int:
     ans = -1

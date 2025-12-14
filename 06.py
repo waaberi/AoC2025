@@ -1,4 +1,4 @@
-from adventofcode import AoC
+from adventofcode import AoC # type: ignore
 import typing
 
 def prod(lst: typing.Iterable[int]) -> int:

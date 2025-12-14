@@ -1,4 +1,4 @@
-from adventofcode import AoC
+from adventofcode import AoC # type: ignore
 
 class SlowerRotatedCounter:
     def __init__(self):

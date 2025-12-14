@@ -1,4 +1,4 @@
-from adventofcode import AoC
+from adventofcode import AoC # type: ignore
 from collections import deque
 from functools import cache
 
@@ -26,7 +26,7 @@ def create_adjacency_list(inp: str) -> tuple[dict[str, list[str]], dict[str, lis
     return d, backwards_d
 
 def bfs_reachable(start: str, adjacency_list: dict[str, list[str]]) -> set[str]:
-    reachable = set()
+    reachable: set[str] = set()
     queue = deque([start])
     reachable.add(start)
     

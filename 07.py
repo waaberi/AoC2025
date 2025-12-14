@@ -1,4 +1,4 @@
-from adventofcode import AoC
+from adventofcode import AoC # type: ignore
 
 
 def template(inp: str) -> tuple[list[list[str]], int]:
